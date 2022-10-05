@@ -1,0 +1,30 @@
+const container = document.getElementById('container');
+const content = document.createElement('div');
+const createP = document.createElement('p');
+const headingOne = document.createElement('h1');
+createP.classList.add('createP');
+createP.textContent = 'Hey im red';
+createP.style.color = ('red');
+createP.style.textAlign = ('center');
+container.appendChild(createP);
+content.classList.add('content');
+content.setAttribute('style','background-color: pink; height:100px;width:50vh;margin:0 auto;border:5px solid black');
+headingOne.classList.add('headingOne');
+headingOne.setAttribute('style','color:blue');
+container.appendChild(content);
+const insideContent = document.createElement('div');
+insideContent.classList.add('insideContent');
+const paraInside = document.createElement('p');
+paraInside.classList.add('paraInside');
+paraInside.textContent = 'ME TOO!';
+const headingInside = document.createElement('h1');
+headingInside.classList.add('headingInside');
+headingInside.textContent = 'I\'m in a div';
+insideContent.appendChild(headingInside);
+insideContent.appendChild(paraInside);
+content.appendChild(insideContent);
+
+const btn = document.querySelector("button");
+btn.addEventListener('click',function(e){
+    e.target.style.background = 'blue';
+});
